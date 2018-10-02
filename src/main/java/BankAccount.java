@@ -26,13 +26,46 @@ public class BankAccount {
     public double interestRate;
     private double interestEarned;
 
+    /** Creates a new BankAccount object.
+     *
+     * @param name the customer's name
+     * @param accountCategory the type of account
+     */
     public BankAccount(final String name, final BankAccountType accountCategory) {
-        /*
-         * Implement this function
-         */
+        ownerName = name;
+        accountType = accountCategory;
+        Bank.totalAccounts++;
     }
 
-    /*
-     * Implement getters and setters as appropriate for private variables.
+    /** Returns the owner's balance.
+     *
+     * @return the balance of the account
      */
+    public double getBalance() {
+        return accountBalance;
+    }
+
+    /** Sets the account's balance.
+     *
+     * @param setBalance the new balance
+     */
+    public void setBalance(final double setBalance) {
+        accountBalance = setBalance;
+    }
+
+    /** Returns the owner's name.
+     *
+     * @return the name of the customer
+     */
+    public String getName() {
+        return ownerName;
+    }
+
+    /** Sets the owner's name.
+     *
+     * @param setName the new name
+     */
+    public void setName(final String setName) {
+        ownerName = setName;
+    }
 }
